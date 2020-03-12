@@ -5,18 +5,33 @@ from scipy.spatial.distance import cosine
 import math
 
 contextList = ['sunny', 'cloudy', 'rainy', 'snowing']
-contextScore = [8, 6, 4, 2]
+contextScore = [0.8, 0.6, 0.4, 0.2]
 
 # Generates recommendations based on user-user collaborative recommendations
-def generateRecommendations(userID, context):
+def generateRecommendations(data, userID, context):
 
     # Get the predicted item scores for each context
     itemScores = []
     alphaValues = []
     for c in contextList:
-        itemScore, userAverageRating = singleContextRecommendation(userID, c)
+        itemScore, userAverageRating = singleContextRecommendation(data, userID, c)
+        count = 0
+        for item in items:
+            try:
+                if(itemScore[count][0] != item):
+                    lst = [item, 0]
+                    itemScore.insert(count, lst)
+            except:
+                lst = [item, 0]
+                itemScore.insert(count, lst)
+            count += 1
+
+
         itemScores.append(itemScore)
-        alphaValues.append(1/userAverageRating)
+        if(userAverageRating == 0):
+            alphaValues.append(0)
+        else:
+            alphaValues.append(1/userAverageRating)
     
     # Calculate the weighting each context has
     contextWeights = []
@@ -30,7 +45,7 @@ def generateRecommendations(userID, context):
         contextWeights.append(weight)
     
     # Predict the item ratings
-    finalItemRatings = []
+    finalItemRatings = {}
     for item in range(0, len(itemScores[0])):
         num_total = 0
         den_total = 0
@@ -38,18 +53,14 @@ def generateRecommendations(userID, context):
             num_total += itemScores[context][item][1] * contextWeights[context]
             den_total += contextWeights[context]
         finalItemRating = num_total / den_total
-        finalItemRatings.append([itemScores[context][item][0], finalItemRating])
-    
-    # Sort the final item ratings by value
-    finalItemRatings.sort(key=lambda x: x[1], reverse=True)
+        finalItemRatings[itemScores[context][item][0]] = finalItemRating
 
     # Return the item recommendations
     return finalItemRatings
 
 
-
 # Calculates user similarity and returns an ordered list of them
-def userSimilarity(result, userRatings):
+def userSimilarity(result, userID, userRatings):
     similarUsers = []
     for userID_2, userData_2 in result.iterrows():
         if(userID_2 != userID):
@@ -101,19 +112,26 @@ def getPredictedItemScores(mostSimilarUsers, similarUsers, userAverageRating, us
     return itemRatings
 
 # Gets the recommendations for a single context
-def singleContextRecommendation(userID, context):
+def singleContextRecommendation(data, userID, context):
+    
     # Reduce dimensions to remove unnecessary context
-    df = ratings_data[ratings_data['weather'] == context]
+    df = data[data['weather'] == context]
 
     # Converts input data to Users x Items table
-    result = df.pivot_table(index='UserID', columns="ItemID", values="Rating").fillna(0)
+    result = df.pivot_table(index="UserID", columns="ItemID", values="Rating").fillna(0)
 
     # Get user rating information
-    userRatings = result.loc[userID,:]
+    try:
+        userRatings = result.loc[userID,:]
+    except:
+        itemRatings = []
+        for item in items:
+            itemRatings.append([item, 0])
+        return itemRatings, 0
     userAverageRating = userRatings.sum() / ((userRatings != 0).sum())
 
     # Get similar users
-    similarUsers = userSimilarity(result, userRatings)
+    similarUsers = userSimilarity(result, userID, userRatings)
 
     # Get dataframe of most similar users
     mostSimilarUsers = topUsersDataframe(result, similarUsers)
@@ -145,9 +163,13 @@ def displayMainMenu(UserID):
     print("Press any enter to generate recommendations")
 
 def displayRecommendations(itemRatings):
+    # Convert the dictionary back to a list
+    temp = list(map(list, itemRatings.items()))
+    sortedList = sorted(temp, key=lambda x: x[1], reverse=True)
+
     # Put top items in dataframe, merge, and remove unuseful information
-    topItems = pd.DataFrame(itemRatings[0:10], columns=["ItemID", "Rating"])
-    items = pd.merge(music_data, topItems, on="ItemID", how="right", sort="False")
+    topItems = pd.DataFrame(sortedList[:10], columns=["ItemID", "Rating"])
+    items = pd.merge(item_data, topItems, on="ItemID", how="right", sort="False")
     items = items.sort_values("Rating", ascending=False)
     items = items.drop("imageurl", 1); items = items.drop("description", 1)
     items = items.drop("mp3url", 1); items = items.drop("album", 1)
@@ -155,12 +177,12 @@ def displayRecommendations(itemRatings):
     print("Your recommendations are:")
     print(items)
 
-def mainMenu(userID):
+def mainMenu(ratings_data, userID):
     completed = False
     while(not completed):
         displayMainMenu(userID)
         generate = input("")
-        itemRatings = generateRecommendations(userID, 'snowing')
+        itemRatings = generateRecommendations(ratings_data, userID, 'snowing')
         displayRecommendations(itemRatings)
         x = input()
 
@@ -177,22 +199,51 @@ def signInUser():
         else:
             print("That user does not exist within the system")
 
+
+
+
+
+def MAE(ratings_data):
+    # Important imports
+    from sklearn.model_selection import train_test_split
+    from sklearn.metrics import mean_absolute_error
+
+    # Split data into testing data and training data
+    train_data, test_data = train_test_split(ratings_data,train_size=0.8)
+
+    # Need to calculate predicted ratings for each user in each context
+    contextList = ['sunny', 'cloudy', 'rainy', 'snowing']
+    y_true = []
+    y_pred = []
+    for user in users:
+        for context in contextList:
+            recommendations = generateRecommendations(train_data, user, context)
+            for index, row in test_data.iterrows():
+                if(row['UserID'] == user):
+                    currentItem = row['ItemID'] 
+                    if(not math.isnan(recommendations[currentItem])):
+                        y_true.append(row['Rating'])
+                        y_pred.append(round(recommendations[currentItem]))
+
+    mae = mean_absolute_error(y_true, y_pred)
+    return mae
+
+
+
+
 # Read in data
 clear()
 ratings_data = pd.read_csv("ContextualRatings_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
-music_data = pd.read_csv("MusicData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
-#userID = signInUser()
-#mainMenu(userID)
+item_data = pd.read_csv("ItemData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
+user_data = pd.read_csv("UserData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
+# Pre-process database to average multiple ratings on same item
+#ratings_data = ratings_data.groupby(['UserID', 'ItemID', 'weather'], as_index = False)['Rating'].mean()
 
-
-
-# MAE Stuff
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
-
-# Split data into testing data and training data
-train_data, test_data = train_test_split(ratings_data,train_size=0.8)
-print(train_data)
-print(test_data)
-
-# Need to calculate predicted ratings for each context
+users = ratings_data.UserID.unique()
+items = ratings_data.ItemID.unique()
+users.sort()
+items.sort()
+mae = MAE(ratings_data)
+print(mae)
+userID = signInUser()
+mainMenu(ratings_data, userID)
