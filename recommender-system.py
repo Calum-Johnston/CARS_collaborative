@@ -160,7 +160,9 @@ def displayMainMenu(UserID):
     print("CARS Recommendation System")
     print("==========================")
     print("Signed in as: " + str(userID))
-    print("Press any enter to generate recommendations")
+    print("Press 1 to generate recommendations")
+    print("Press 2 to determine MAE")
+    print("Press any other key to QUIT")
 
 def displayRecommendations(itemRatings):
     # Convert the dictionary back to a list
@@ -177,14 +179,25 @@ def displayRecommendations(itemRatings):
     print("Your recommendations are:")
     print(items)
 
+def displayMAE(mae):
+    print("The system has an MAE of: " , mae)
+
 def mainMenu(ratings_data, userID):
     completed = False
     while(not completed):
+        clear()
         displayMainMenu(userID)
         generate = input("")
-        itemRatings = generateRecommendations(ratings_data, userID, 'snowing')
-        displayRecommendations(itemRatings)
-        x = input()
+        if(generate == '1'):
+            itemRatings = generateRecommendations(ratings_data, userID, 'snowing')
+            displayRecommendations(itemRatings)
+            x = input("Press any key to continue")
+        elif(generate == '2'):
+            mae = MAE(ratings_data)
+            displayMAE(mae)
+            x = input("Press any key to continue")
+        else:
+            completed = True
 
 def signInUser():
     signedIn = False
@@ -215,11 +228,12 @@ def MAE(ratings_data):
     contextList = ['sunny', 'cloudy', 'rainy', 'snowing']
     y_true = []
     y_pred = []
+    test_data = test_data.sort_values('UserID')
     for user in users:
         for context in contextList:
             recommendations = generateRecommendations(train_data, user, context)
             for index, row in test_data.iterrows():
-                if(row['UserID'] == user):
+                if(row['UserID'] == user and row['weather'] == context):
                     currentItem = row['ItemID'] 
                     if(not math.isnan(recommendations[currentItem])):
                         y_true.append(row['Rating'])
@@ -243,7 +257,7 @@ users = ratings_data.UserID.unique()
 items = ratings_data.ItemID.unique()
 users.sort()
 items.sort()
-mae = MAE(ratings_data)
-print(mae)
+
+
 userID = signInUser()
 mainMenu(ratings_data, userID)
