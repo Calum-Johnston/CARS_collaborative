@@ -226,11 +226,15 @@ def signInUser():
     users = ratings_data.UserID.unique()
     while(not signedIn):  
         displaySignInMenu()
-        user = int(input(""))
-        clear()
-        if(user in users):
-            return user
-        else:
+        try:
+            user = int(input(""))
+            clear()
+            if(user in users):
+                return user
+            else:
+                print("That user does not exist within the system")
+        except:
+            clear()
             print("That user does not exist within the system")
 
 def getContext(userID):
@@ -294,9 +298,9 @@ def evaluateSys(ratings_data):
 
 # Read in data
 clear()
-ratings_data = pd.read_csv("ContextualRatings_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
-item_data = pd.read_csv("MusicData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
-user_data = pd.read_csv("UserData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
+ratings_data = pd.read_csv("dataset/ContextualRatings_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
+item_data = pd.read_csv("dataset/MusicData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
+user_data = pd.read_csv("dataset/UserData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
 # Pre-process database to average multiple ratings on same item
 ratings_data = ratings_data.groupby(['UserID', 'ItemID', 'weather'], as_index = False)['Rating'].mean()
 
