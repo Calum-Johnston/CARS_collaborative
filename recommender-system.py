@@ -12,36 +12,38 @@ def generateRecommendations(data, userID, context):
 
     # Get the predicted item scores for each context
     itemScores = []
-    alphaValues = []
+    userTotalRatings = []
     for c in contextList:
-        itemScore, userAverageRating = singleContextRecommendation(data, userID, c)
+        itemScore, userRatingCount = singleContextRecommendation(data, userID, c)
         count = 0
         for item in items:
             try:
                 if(itemScore[count][0] != item):
                     lst = [item, 0]
                     itemScore.insert(count, lst)
+                
+                if(itemScore[count][1] > 5):
+                    itemScore[count][1] = 5
+                elif(itemScore[count][1] < 1):
+                    itemScore[count][1] = 1
             except:
                 lst = [item, 0]
                 itemScore.insert(count, lst)
             count += 1
-
-
         itemScores.append(itemScore)
-        if(userAverageRating == 0):
-            alphaValues.append(0)
-        else:
-            alphaValues.append(1/userAverageRating)
-    
+        userTotalRatings.append(userRatingCount)
+
+
     # Calculate the weighting each context has
     contextWeights = []
+    count = 0
     currentContextScore = contextScore[contextList.index(context)]
     for c_score in contextScore:
         score_Diff = abs(c_score - currentContextScore)
         if(score_Diff == 0):
             score_Diff = 1
         inv_score_Diff = 1 / score_Diff
-        weight = inv_score_Diff * alphaValues[contextScore.index(c_score)]
+        weight = inv_score_Diff * (userTotalRatings[count] / sum(userTotalRatings))
         contextWeights.append(weight)
     
     # Predict the item ratings
@@ -143,7 +145,7 @@ def singleContextRecommendation(data, userID, context):
     itemRatings =  getPredictedItemScores(mostSimilarUsers, similarUsers, userAverageRating, userRatings, averageRatings)
 
     # Return item ratings and the users average score
-    return itemRatings, userAverageRating
+    return itemRatings, ((userRatings != 0).sum())
 
 
 
@@ -158,11 +160,20 @@ def displaySignInMenu():
     
 def displayMainMenu(UserID):
     print("CARS Recommendation System")
-    print("==========================")
     print("Signed in as: " + str(userID))
+    print("==========================")
     print("Press 1 to generate recommendations")
-    print("Press 2 to determine MAE")
+    print("Press 2 to update the weather type")
+    print("Press 3 to evaluate the system")
+    print("Press 4 to sign in as another user")
     print("Press any other key to QUIT")
+
+def displayContextMenu(UserID):
+    print("CARS Recommendation System")
+    print("Signed in as: " + str(userID))
+    print("==========================")
+    print("Please enter the current weather state")
+    print("Note: Choose from 'sunny', 'cloudy', 'rainy' or 'snowing'")
 
 def displayRecommendations(itemRatings):
     # Convert the dictionary back to a list
@@ -175,29 +186,40 @@ def displayRecommendations(itemRatings):
     items = items.sort_values("Rating", ascending=False)
     items = items.drop("imageurl", 1); items = items.drop("description", 1)
     items = items.drop("mp3url", 1); items = items.drop("album", 1)
-    items = items.drop("category_id", 1)
+    items = items.drop("category_id", 1); items = items.drop("Rating", 1)
     print("Your recommendations are:")
     print(items)
 
-def displayMAE(mae):
+def displayMAE(mae, precision, recall):
     print("The system has an MAE of: " , mae)
+    print("The system has a precision of: ", precision)
+    print("The system has a recall of ", recall)
 
 def mainMenu(ratings_data, userID):
     completed = False
+    context = getContext(userID)
     while(not completed):
         clear()
         displayMainMenu(userID)
         generate = input("")
         if(generate == '1'):
-            itemRatings = generateRecommendations(ratings_data, userID, 'snowing')
+            clear()
+            itemRatings = generateRecommendations(ratings_data, userID, context)
             displayRecommendations(itemRatings)
             x = input("Press any key to continue")
         elif(generate == '2'):
-            mae = MAE(ratings_data)
-            displayMAE(mae)
+            clear()
+            context = getContext(userID)
+        elif(generate == '3'):
+            clear()
+            mae, precision, recall = evaluateSys(ratings_data)
+            displayMAE(mae, precision, recall)
             x = input("Press any key to continue")
+        elif(generate == '4'):
+            clear()
+            return True
         else:
-            completed = True
+            return False
 
 def signInUser():
     signedIn = False
@@ -207,16 +229,25 @@ def signInUser():
         user = int(input(""))
         clear()
         if(user in users):
-            print("Sign in successful!")
             return user
         else:
             print("That user does not exist within the system")
 
+def getContext(userID):
+    displayContextMenu(userID)
+    complete = False
+    while(not complete):
+        x = input("")
+        if(x == "snowing" or x == "sunny" or x == "cloudy" or x == "rainy"):
+            complete = True
+        else:
+            print("Please enter one of the valid options")
+    return x
 
 
 
 
-def MAE(ratings_data):
+def evaluateSys(ratings_data):
     # Important imports
     from sklearn.model_selection import train_test_split
     from sklearn.metrics import mean_absolute_error
@@ -228,6 +259,9 @@ def MAE(ratings_data):
     contextList = ['sunny', 'cloudy', 'rainy', 'snowing']
     y_true = []
     y_pred = []
+    TP = 0
+    FP = 0
+    FN = 0
     test_data = test_data.sort_values('UserID')
     for user in users:
         for context in contextList:
@@ -236,11 +270,24 @@ def MAE(ratings_data):
                 if(row['UserID'] == user and row['weather'] == context):
                     currentItem = row['ItemID'] 
                     if(not math.isnan(recommendations[currentItem])):
-                        y_true.append(row['Rating'])
-                        y_pred.append(round(recommendations[currentItem]))
+                        actual_value = row['Rating']
+                        recommended_value = round(recommendations[currentItem])
+                        y_true.append(actual_value)
+                        y_pred.append(recommended_value)
+
+                        # Calculate precision
+                        if(actual_value >= 2.5 and recommended_value >= 2.5):
+                            TP += 1
+                        if(actual_value < 2.5 and recommended_value >= 2.5):
+                            FP += 1
+                        if(actual_value >= 2.5 and recommended_value < 2.5):
+                            FN += 1
+                        
 
     mae = mean_absolute_error(y_true, y_pred)
-    return mae
+    precision = TP / (TP + FP)
+    recall = TP / (TP + FN)
+    return mae, precision, recall
 
 
 
@@ -248,16 +295,17 @@ def MAE(ratings_data):
 # Read in data
 clear()
 ratings_data = pd.read_csv("ContextualRatings_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
-item_data = pd.read_csv("ItemData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
+item_data = pd.read_csv("MusicData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
 user_data = pd.read_csv("UserData_InCarMusic.csv", index_col=False, delimiter=',', encoding="utf-8-sig")
 # Pre-process database to average multiple ratings on same item
-#ratings_data = ratings_data.groupby(['UserID', 'ItemID', 'weather'], as_index = False)['Rating'].mean()
+ratings_data = ratings_data.groupby(['UserID', 'ItemID', 'weather'], as_index = False)['Rating'].mean()
 
 users = ratings_data.UserID.unique()
 items = ratings_data.ItemID.unique()
 users.sort()
 items.sort()
 
-
-userID = signInUser()
-mainMenu(ratings_data, userID)
+complete = True
+while(complete):
+    userID = signInUser()
+    complete = mainMenu(ratings_data, userID)

@@ -416,7 +416,7 @@
 1006,745,2,NA,coast line,NA,NA,NA,NA,NA,cloudy
 1006,704,1,NA,coast line,NA,NA,NA,NA,NA,snowing
 1006,741,4,sport driving,NA,NA,NA,NA,NA,NA,sunny
-1006,680,0,sport driving,NA,NA,NA,NA,NA,NA,snowing
+1006,680,1,sport driving,NA,NA,NA,NA,NA,NA,snowing
 1006,701,2,sport driving,NA,NA,NA,NA,NA,NA,cloudy
 1006,756,1,sport driving,NA,NA,NA,NA,NA,NA,rainy
 1006,725,3,sport driving,NA,NA,NA,NA,NA,NA,snowing
@@ -491,7 +491,7 @@
 1008,291,2,NA,NA,NA,NA,NA,NA,NA,cloudy
 1008,711,1,NA,NA,NA,NA,NA,NA,NA,rainy
 1008,761,1,NA,NA,NA,NA,NA,NA,NA,cloudy
-1008,750,0,NA,NA,NA,NA,NA,NA,NA,sunny
+1008,750,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1008,684,1,NA,NA,NA,NA,NA,NA,NA,cloudy
 1008,264,1,NA,NA,NA,NA,NA,NA,traffic jam,sunny
 1008,693,1,NA,NA,NA,NA,NA,NA,traffic jam,sunny
@@ -507,8 +507,8 @@
 1008,691,1,NA,NA,NA,NA,NA,NA,free road,sunny
 1008,727,2,NA,NA,NA,NA,NA,NA,free road,rainy
 1008,270,1,NA,NA,NA,NA,NA,sleepy,NA,snowing
-1008,255,0,NA,NA,NA,NA,NA,awake,NA,cloudy
-1008,759,0,NA,NA,NA,NA,NA,awake,NA,cloudy
+1008,255,1,NA,NA,NA,NA,NA,awake,NA,cloudy
+1008,759,1,NA,NA,NA,NA,NA,awake,NA,cloudy
 1008,264,2,NA,NA,NA,NA,NA,awake,NA,cloudy
 1008,291,3,NA,NA,NA,NA,serpentine,NA,NA,rainy
 1008,273,1,NA,NA,NA,NA,highway,NA,NA,snowing
@@ -518,14 +518,14 @@
 1008,721,1,NA,NA,NA,night,NA,NA,NA,sunny
 1008,721,1,NA,NA,NA,day time,NA,NA,NA,snowing
 1008,739,1,NA,NA,NA,day time,NA,NA,NA,sunny
-1008,255,0,NA,NA,NA,afternoon,NA,NA,NA,sunny
+1008,255,1,NA,NA,NA,afternoon,NA,NA,NA,sunny
 1008,739,1,NA,NA,NA,afternoon,NA,NA,NA,snowing
 1008,701,1,NA,NA,sad,NA,NA,NA,NA,rainy
 1008,295,1,NA,NA,lazy,NA,NA,NA,NA,snowing
 1008,261,3,NA,NA,happy,NA,NA,NA,NA,snowing
 1008,684,3,NA,NA,happy,NA,NA,NA,NA,sunny
 1008,746,4,NA,NA,happy,NA,NA,NA,NA,sunny
-1008,273,0,NA,NA,active,NA,NA,NA,NA,sunny
+1008,273,1,NA,NA,active,NA,NA,NA,NA,sunny
 1008,727,1,NA,NA,active,NA,NA,NA,NA,snowing
 1008,285,1,NA,NA,active,NA,NA,NA,NA,sunny
 1008,691,1,NA,urban,NA,NA,NA,NA,NA,cloudy
@@ -538,8 +538,8 @@
 1008,695,1,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1008,261,3,relaxed driving,NA,NA,NA,NA,NA,NA,sunny
 1008,689,4,relaxed driving,NA,NA,NA,NA,NA,NA,sunny
-1008,750,0,NA,NA,NA,NA,NA,NA,NA,cloudy
-1008,273,0,NA,NA,NA,NA,NA,NA,NA,cloudy
+1008,750,1,NA,NA,NA,NA,NA,NA,NA,cloudy
+1008,273,1,NA,NA,NA,NA,NA,NA,NA,cloudy
 1008,746,3,NA,NA,NA,NA,NA,NA,NA,snowing
 1008,285,1,NA,NA,NA,NA,NA,NA,NA,cloudy
 1008,684,2,NA,NA,NA,NA,NA,NA,NA,snowing
@@ -676,7 +676,7 @@
 1009,731,1,NA,NA,active,NA,NA,NA,NA,sunny
 1009,294,1,NA,urban,NA,NA,NA,NA,NA,rainy
 1009,259,2,NA,urban,NA,NA,NA,NA,NA,cloudy
-1009,266,0,NA,urban,NA,NA,NA,NA,NA,rainy
+1009,266,1,NA,urban,NA,NA,NA,NA,NA,rainy
 1009,717,1,NA,urban,NA,NA,NA,NA,NA,rainy
 1009,743,1,NA,urban,NA,NA,NA,NA,NA,rainy
 1009,714,1,NA,urban,NA,NA,NA,NA,NA,rainy
@@ -936,7 +936,7 @@
 1012,284,1,NA,country side,NA,NA,NA,NA,NA,snowing
 1012,728,1,NA,coast line,NA,NA,NA,NA,NA,rainy
 1012,266,1,NA,coast line,NA,NA,NA,NA,NA,sunny
-1012,733,0,NA,coast line,NA,NA,NA,NA,NA,sunny
+1012,733,1,NA,coast line,NA,NA,NA,NA,NA,sunny
 1012,701,1,NA,coast line,NA,NA,NA,NA,NA,sunny
 1012,708,3,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1012,258,3,sport driving,NA,NA,NA,NA,NA,NA,rainy
@@ -964,7 +964,7 @@
 1012,756,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1012,272,2,NA,NA,NA,NA,NA,NA,NA,rainy
 1012,718,1,NA,NA,NA,NA,NA,NA,NA,cloudy
-1012,271,0,NA,NA,NA,NA,NA,NA,NA,rainy
+1012,271,1,NA,NA,NA,NA,NA,NA,NA,rainy
 1012,759,1,NA,NA,NA,NA,NA,NA,NA,snowing
 1012,679,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1012,752,2,NA,NA,NA,NA,NA,NA,NA,rainy
@@ -980,10 +980,10 @@
 1012,690,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1012,254,3,NA,NA,NA,NA,NA,NA,NA,sunny
 1012,728,1,NA,NA,NA,NA,NA,NA,NA,cloudy
-1013,755,0,NA,NA,NA,NA,NA,NA,lots of cars,snowing
+1013,755,1,NA,NA,NA,NA,NA,NA,lots of cars,snowing
 1013,761,1,NA,NA,NA,NA,highway,NA,NA,cloudy
 1013,761,3,NA,NA,NA,NA,city,NA,NA,sunny
-1013,755,0,NA,NA,NA,afternoon,NA,NA,NA,sunny
+1013,755,1,NA,NA,NA,afternoon,NA,NA,NA,sunny
 1014,731,4,NA,NA,NA,NA,NA,NA,NA,rainy
 1014,277,3,NA,NA,NA,NA,NA,NA,NA,sunny
 1014,752,5,NA,NA,NA,NA,NA,NA,NA,snowing
@@ -1222,7 +1222,7 @@
 1019,746,1,NA,NA,NA,NA,NA,NA,lots of cars,snowing
 1019,282,4,NA,NA,NA,NA,NA,NA,lots of cars,cloudy
 1019,260,5,NA,NA,NA,NA,NA,NA,lots of cars,snowing
-1019,761,0,NA,NA,NA,NA,NA,NA,lots of cars,cloudy
+1019,761,1,NA,NA,NA,NA,NA,NA,lots of cars,cloudy
 1019,762,3,NA,NA,NA,NA,NA,NA,lots of cars,snowing
 1019,718,1,NA,NA,NA,NA,NA,NA,lots of cars,snowing
 1019,725,1,NA,NA,NA,NA,NA,NA,free road,sunny
@@ -1411,7 +1411,7 @@
 1019,710,1,NA,urban,NA,NA,NA,NA,NA,cloudy
 1019,762,1,NA,urban,NA,NA,NA,NA,NA,sunny
 1019,273,5,NA,urban,NA,NA,NA,NA,NA,snowing
-1019,728,0,NA,urban,NA,NA,NA,NA,NA,sunny
+1019,728,1,NA,urban,NA,NA,NA,NA,NA,sunny
 1019,712,3,NA,mountains,NA,NA,NA,NA,NA,snowing
 1019,688,1,NA,mountains,NA,NA,NA,NA,NA,rainy
 1019,754,1,NA,mountains,NA,NA,NA,NA,NA,rainy
@@ -1454,7 +1454,7 @@
 1019,272,2,sport driving,NA,NA,NA,NA,NA,NA,snowing
 1019,263,5,sport driving,NA,NA,NA,NA,NA,NA,cloudy
 1019,267,5,sport driving,NA,NA,NA,NA,NA,NA,sunny
-1019,723,0,sport driving,NA,NA,NA,NA,NA,NA,sunny
+1019,723,1,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1019,746,1,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1019,732,1,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1019,677,1,sport driving,NA,NA,NA,NA,NA,NA,rainy
@@ -1469,13 +1469,13 @@
 1019,725,1,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
 1019,697,1,relaxed driving,NA,NA,NA,NA,NA,NA,rainy
 1019,735,1,relaxed driving,NA,NA,NA,NA,NA,NA,rainy
-1019,710,0,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
+1019,710,1,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
 1019,264,4,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
 1019,729,1,relaxed driving,NA,NA,NA,NA,NA,NA,rainy
 1019,267,5,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
 1019,693,1,relaxed driving,NA,NA,NA,NA,NA,NA,cloudy
 1019,696,1,relaxed driving,NA,NA,NA,NA,NA,NA,sunny
-1019,684,0,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
+1019,684,1,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
 1019,677,1,relaxed driving,NA,NA,NA,NA,NA,NA,sunny
 1019,736,1,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
 1019,762,2,relaxed driving,NA,NA,NA,NA,NA,NA,cloudy
@@ -1537,17 +1537,17 @@
 1020,702,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1020,733,5,NA,NA,NA,NA,NA,NA,NA,rainy
 1020,733,5,NA,NA,NA,NA,NA,NA,NA,snowing
-1020,695,0,NA,NA,NA,NA,NA,NA,NA,rainy
+1020,695,1,NA,NA,NA,NA,NA,NA,NA,rainy
 1020,718,5,NA,NA,NA,NA,NA,NA,NA,sunny
 1020,737,3,NA,NA,NA,NA,NA,NA,NA,cloudy
 1020,684,1,NA,NA,NA,NA,NA,NA,NA,rainy
-1020,273,0,NA,NA,NA,NA,NA,NA,NA,snowing
-1020,751,0,NA,NA,NA,NA,NA,NA,NA,rainy
-1020,261,0,NA,NA,NA,NA,NA,NA,traffic jam,cloudy
-1020,692,0,NA,NA,NA,NA,NA,NA,lots of cars,cloudy
-1020,261,0,NA,NA,NA,NA,NA,NA,lots of cars,sunny
+1020,273,1,NA,NA,NA,NA,NA,NA,NA,snowing
+1020,751,1,NA,NA,NA,NA,NA,NA,NA,rainy
+1020,261,1,NA,NA,NA,NA,NA,NA,traffic jam,cloudy
+1020,692,1,NA,NA,NA,NA,NA,NA,lots of cars,cloudy
+1020,261,1,NA,NA,NA,NA,NA,NA,lots of cars,sunny
 1020,717,1,NA,NA,NA,NA,NA,NA,free road,sunny
-1020,692,0,NA,NA,NA,NA,NA,NA,free road,snowing
+1020,692,1,NA,NA,NA,NA,NA,NA,free road,snowing
 1020,718,5,NA,NA,NA,NA,NA,NA,free road,rainy
 1020,749,1,NA,NA,NA,NA,NA,NA,free road,cloudy
 1020,700,1,NA,NA,NA,NA,NA,NA,free road,rainy
@@ -1556,9 +1556,9 @@
 1020,722,1,NA,NA,NA,NA,NA,sleepy,NA,cloudy
 1020,749,1,NA,NA,NA,NA,NA,sleepy,NA,snowing
 1020,285,3,NA,NA,NA,NA,serpentine,NA,NA,rainy
-1020,739,0,NA,NA,NA,NA,serpentine,NA,NA,rainy
+1020,739,1,NA,NA,NA,NA,serpentine,NA,NA,rainy
 1020,684,2,NA,NA,NA,NA,highway,NA,NA,cloudy
-1020,273,0,NA,NA,NA,NA,highway,NA,NA,rainy
+1020,273,1,NA,NA,NA,NA,highway,NA,NA,rainy
 1020,738,2,NA,NA,NA,NA,highway,NA,NA,snowing
 1020,281,1,NA,NA,NA,NA,city,NA,NA,snowing
 1020,714,5,NA,NA,NA,NA,city,NA,NA,snowing
@@ -1566,68 +1566,68 @@
 1020,733,5,NA,NA,NA,night,NA,NA,NA,cloudy
 1020,717,1,NA,NA,NA,night,NA,NA,NA,rainy
 1020,725,4,NA,NA,NA,night,NA,NA,NA,snowing
-1020,751,0,NA,NA,NA,night,NA,NA,NA,sunny
+1020,751,1,NA,NA,NA,night,NA,NA,NA,sunny
 1020,253,5,NA,NA,NA,morning,NA,NA,NA,rainy
 1020,738,5,NA,NA,NA,morning,NA,NA,NA,cloudy
-1020,261,0,NA,NA,NA,morning,NA,NA,NA,rainy
+1020,261,1,NA,NA,NA,morning,NA,NA,NA,rainy
 1020,253,1,NA,NA,NA,day time,NA,NA,NA,cloudy
 1020,722,1,NA,NA,NA,day time,NA,NA,NA,rainy
 1020,253,2,NA,NA,sad,NA,NA,NA,NA,snowing
-1020,273,0,NA,NA,sad,NA,NA,NA,NA,sunny
+1020,273,1,NA,NA,sad,NA,NA,NA,NA,sunny
 1020,747,1,NA,NA,lazy,NA,NA,NA,NA,cloudy
 1020,296,1,NA,NA,lazy,NA,NA,NA,NA,cloudy
 1020,754,1,NA,NA,happy,NA,NA,NA,NA,snowing
-1020,725,0,NA,NA,happy,NA,NA,NA,NA,cloudy
-1020,692,0,NA,NA,happy,NA,NA,NA,NA,sunny
+1020,725,1,NA,NA,happy,NA,NA,NA,NA,cloudy
+1020,692,1,NA,NA,happy,NA,NA,NA,NA,sunny
 1020,700,1,NA,NA,happy,NA,NA,NA,NA,cloudy
 1020,702,1,NA,NA,active,NA,NA,NA,NA,rainy
 1020,747,1,NA,NA,active,NA,NA,NA,NA,sunny
 1020,285,4,NA,NA,active,NA,NA,NA,NA,snowing
 1020,747,1,NA,urban,NA,NA,NA,NA,NA,snowing
 1020,725,4,NA,urban,NA,NA,NA,NA,NA,sunny
-1020,695,0,NA,urban,NA,NA,NA,NA,NA,cloudy
+1020,695,1,NA,urban,NA,NA,NA,NA,NA,cloudy
 1020,281,1,NA,mountains,NA,NA,NA,NA,NA,cloudy
 1020,714,3,NA,mountains,NA,NA,NA,NA,NA,cloudy
-1020,739,0,NA,mountains,NA,NA,NA,NA,NA,cloudy
+1020,739,1,NA,mountains,NA,NA,NA,NA,NA,cloudy
 1020,296,1,NA,country side,NA,NA,NA,NA,NA,rainy
 1020,684,2,NA,country side,NA,NA,NA,NA,NA,sunny
-1020,695,0,NA,country side,NA,NA,NA,NA,NA,snowing
+1020,695,1,NA,country side,NA,NA,NA,NA,NA,snowing
 1020,738,3,NA,country side,NA,NA,NA,NA,NA,sunny
-1020,732,0,NA,country side,NA,NA,NA,NA,NA,snowing
+1020,732,1,NA,country side,NA,NA,NA,NA,NA,snowing
 1020,737,3,NA,coast line,NA,NA,NA,NA,NA,snowing
-1020,751,0,NA,coast line,NA,NA,NA,NA,NA,snowing
+1020,751,1,NA,coast line,NA,NA,NA,NA,NA,snowing
 1020,749,1,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1020,714,5,sport driving,NA,NA,NA,NA,NA,NA,sunny
-1020,732,0,sport driving,NA,NA,NA,NA,NA,NA,rainy
-1020,732,0,relaxed driving,NA,NA,NA,NA,NA,NA,cloudy
+1020,732,1,sport driving,NA,NA,NA,NA,NA,NA,rainy
+1020,732,1,relaxed driving,NA,NA,NA,NA,NA,NA,cloudy
 1020,702,1,NA,NA,NA,NA,NA,NA,NA,cloudy
 1020,296,2,NA,NA,NA,NA,NA,NA,NA,sunny
 1020,717,1,NA,NA,NA,NA,NA,NA,NA,snowing
 1020,725,2,NA,NA,NA,NA,NA,NA,NA,rainy
 1020,718,5,NA,NA,NA,NA,NA,NA,NA,snowing
-1020,732,0,NA,NA,NA,NA,NA,NA,NA,sunny
-1020,739,0,NA,NA,NA,NA,NA,NA,NA,snowing
+1020,732,1,NA,NA,NA,NA,NA,NA,NA,sunny
+1020,739,1,NA,NA,NA,NA,NA,NA,NA,snowing
 1021,249,3,NA,NA,NA,NA,NA,NA,NA,rainy
 1021,683,2,NA,NA,NA,NA,NA,NA,NA,cloudy
 1021,752,1,NA,NA,NA,NA,NA,NA,NA,sunny
-1021,757,0,NA,NA,NA,NA,NA,NA,NA,sunny
+1021,757,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1021,294,2,NA,NA,NA,NA,NA,NA,NA,snowing
-1021,708,0,NA,NA,NA,NA,NA,NA,traffic jam,cloudy
+1021,708,1,NA,NA,NA,NA,NA,NA,traffic jam,cloudy
 1021,741,4,NA,NA,NA,NA,NA,NA,traffic jam,rainy
 1021,701,1,NA,NA,NA,NA,NA,NA,traffic jam,snowing
 1021,249,1,NA,NA,NA,NA,NA,NA,lots of cars,cloudy
 1021,741,4,NA,NA,NA,NA,NA,NA,lots of cars,cloudy
-1021,733,0,NA,NA,NA,NA,NA,NA,free road,cloudy
+1021,733,1,NA,NA,NA,NA,NA,NA,free road,cloudy
 1021,294,5,NA,NA,NA,NA,NA,NA,free road,cloudy
-1021,708,0,NA,NA,NA,NA,NA,sleepy,NA,sunny
+1021,708,1,NA,NA,NA,NA,NA,sleepy,NA,sunny
 1021,701,1,NA,NA,NA,NA,NA,sleepy,NA,rainy
 1021,752,2,NA,NA,NA,morning,NA,NA,NA,cloudy
-1021,733,0,NA,NA,sad,NA,NA,NA,NA,sunny
+1021,733,1,NA,NA,sad,NA,NA,NA,NA,sunny
 1021,294,2,NA,NA,sad,NA,NA,NA,NA,sunny
 1021,743,3,NA,NA,happy,NA,NA,NA,NA,sunny
-1021,733,0,NA,NA,active,NA,NA,NA,NA,snowing
-1021,757,0,NA,NA,active,NA,NA,NA,NA,snowing
-1021,708,0,NA,mountains,NA,NA,NA,NA,NA,snowing
+1021,733,1,NA,NA,active,NA,NA,NA,NA,snowing
+1021,757,1,NA,NA,active,NA,NA,NA,NA,snowing
+1021,708,1,NA,mountains,NA,NA,NA,NA,NA,snowing
 1021,683,4,NA,country side,NA,NA,NA,NA,NA,sunny
 1021,743,4,sport driving,NA,NA,NA,NA,NA,NA,snowing
 1021,741,4,sport driving,NA,NA,NA,NA,NA,NA,sunny
@@ -1666,12 +1666,12 @@
 1023,250,1,NA,NA,NA,NA,NA,NA,NA,rainy
 1023,295,1,NA,NA,NA,NA,NA,NA,NA,snowing
 1023,746,3,NA,NA,NA,NA,NA,NA,NA,cloudy
-1023,280,0,NA,NA,NA,NA,NA,NA,NA,snowing
+1023,280,1,NA,NA,NA,NA,NA,NA,NA,snowing
 1023,292,1,NA,NA,NA,NA,NA,NA,NA,cloudy
 1023,693,4,NA,NA,NA,NA,NA,NA,NA,sunny
 1023,253,4,NA,NA,NA,NA,NA,NA,NA,sunny
 1023,290,1,NA,NA,NA,NA,NA,NA,NA,snowing
-1023,282,0,NA,NA,NA,NA,NA,NA,NA,sunny
+1023,282,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1023,291,3,NA,NA,NA,NA,NA,NA,NA,snowing
 1023,291,4,NA,NA,NA,NA,NA,NA,NA,cloudy
 1023,737,5,NA,NA,NA,NA,NA,NA,NA,snowing
@@ -1695,24 +1695,24 @@
 1023,732,3,NA,NA,NA,NA,NA,NA,lots of cars,rainy
 1023,272,2,NA,NA,NA,NA,NA,NA,free road,cloudy
 1023,250,3,NA,NA,NA,NA,NA,NA,free road,snowing
-1023,691,0,NA,NA,NA,NA,NA,NA,free road,snowing
+1023,691,1,NA,NA,NA,NA,NA,NA,free road,snowing
 1023,682,5,NA,NA,NA,NA,NA,NA,free road,rainy
 1023,730,1,NA,NA,NA,NA,NA,NA,free road,sunny
 1023,252,4,NA,NA,NA,NA,NA,sleepy,NA,rainy
 1023,272,1,NA,NA,NA,NA,NA,sleepy,NA,snowing
-1023,691,0,NA,NA,NA,NA,NA,sleepy,NA,sunny
+1023,691,1,NA,NA,NA,NA,NA,sleepy,NA,sunny
 1023,754,2,NA,NA,NA,NA,serpentine,NA,NA,rainy
 1023,713,5,NA,NA,NA,NA,serpentine,NA,NA,rainy
 1023,278,5,NA,NA,NA,NA,highway,NA,NA,sunny
 1023,750,5,NA,NA,NA,NA,highway,NA,NA,rainy
-1023,282,0,NA,NA,NA,NA,highway,NA,NA,rainy
+1023,282,1,NA,NA,NA,NA,highway,NA,NA,rainy
 1023,680,4,NA,NA,NA,NA,highway,NA,NA,sunny
 1023,292,1,NA,NA,NA,NA,highway,NA,NA,snowing
 1023,703,3,NA,NA,NA,NA,city,NA,NA,cloudy
-1023,722,0,NA,NA,NA,NA,city,NA,NA,rainy
+1023,722,1,NA,NA,NA,NA,city,NA,NA,rainy
 1023,290,3,NA,NA,NA,night,NA,NA,NA,rainy
 1023,262,1,NA,NA,NA,night,NA,NA,NA,rainy
-1023,748,0,NA,NA,NA,morning,NA,NA,NA,rainy
+1023,748,1,NA,NA,NA,morning,NA,NA,NA,rainy
 1023,751,4,NA,NA,NA,morning,NA,NA,NA,sunny
 1023,278,4,NA,NA,NA,day time,NA,NA,NA,snowing
 1023,693,3,NA,NA,NA,day time,NA,NA,NA,snowing
@@ -1724,11 +1724,11 @@
 1023,734,5,NA,NA,sad,NA,NA,NA,NA,snowing
 1023,252,3,NA,NA,lazy,NA,NA,NA,NA,snowing
 1023,676,1,NA,NA,lazy,NA,NA,NA,NA,cloudy
-1023,748,0,NA,NA,lazy,NA,NA,NA,NA,snowing
+1023,748,1,NA,NA,lazy,NA,NA,NA,NA,snowing
 1023,699,5,NA,NA,happy,NA,NA,NA,NA,rainy
 1023,743,4,NA,NA,happy,NA,NA,NA,NA,rainy
 1023,696,5,NA,NA,happy,NA,NA,NA,NA,snowing
-1023,280,0,NA,NA,happy,NA,NA,NA,NA,rainy
+1023,280,1,NA,NA,happy,NA,NA,NA,NA,rainy
 1023,713,5,NA,NA,happy,NA,NA,NA,NA,cloudy
 1023,730,1,NA,NA,happy,NA,NA,NA,NA,cloudy
 1023,274,1,NA,NA,happy,NA,NA,NA,NA,sunny
@@ -1743,17 +1743,17 @@
 1023,730,5,NA,mountains,NA,NA,NA,NA,NA,snowing
 1023,761,2,NA,country side,NA,NA,NA,NA,NA,snowing
 1023,699,2,NA,country side,NA,NA,NA,NA,NA,sunny
-1023,280,0,NA,country side,NA,NA,NA,NA,NA,cloudy
+1023,280,1,NA,country side,NA,NA,NA,NA,NA,cloudy
 1023,754,2,NA,country side,NA,NA,NA,NA,NA,snowing
 1023,734,5,NA,coast line,NA,NA,NA,NA,NA,sunny
 1023,692,4,NA,coast line,NA,NA,NA,NA,NA,cloudy
 1023,699,5,NA,coast line,NA,NA,NA,NA,NA,snowing
 1023,682,4,NA,coast line,NA,NA,NA,NA,NA,cloudy
 1023,703,5,sport driving,NA,NA,NA,NA,NA,NA,rainy
-1023,748,0,sport driving,NA,NA,NA,NA,NA,NA,sunny
+1023,748,1,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1023,728,5,sport driving,NA,NA,NA,NA,NA,NA,cloudy
 1023,703,2,relaxed driving,NA,NA,NA,NA,NA,NA,sunny
-1023,722,0,relaxed driving,NA,NA,NA,NA,NA,NA,cloudy
+1023,722,1,relaxed driving,NA,NA,NA,NA,NA,NA,cloudy
 1023,274,5,relaxed driving,NA,NA,NA,NA,NA,NA,rainy
 1023,713,1,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
 1023,737,2,relaxed driving,NA,NA,NA,NA,NA,NA,cloudy
@@ -1764,8 +1764,8 @@
 1023,252,2,NA,NA,NA,NA,NA,NA,NA,sunny
 1023,725,4,NA,NA,NA,NA,NA,NA,NA,snowing
 1023,746,4,NA,NA,NA,NA,NA,NA,NA,rainy
-1023,722,0,NA,NA,NA,NA,NA,NA,NA,sunny
-1023,282,0,NA,NA,NA,NA,NA,NA,NA,snowing
+1023,722,1,NA,NA,NA,NA,NA,NA,NA,sunny
+1023,282,1,NA,NA,NA,NA,NA,NA,NA,snowing
 1023,291,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1023,754,3,NA,NA,NA,NA,NA,NA,NA,cloudy
 1023,751,4,NA,NA,NA,NA,NA,NA,NA,snowing
@@ -1876,12 +1876,12 @@
 1027,746,4,NA,NA,NA,NA,city,NA,NA,snowing
 1027,698,2,NA,NA,NA,NA,city,NA,NA,cloudy
 1027,260,1,NA,NA,NA,NA,city,NA,NA,cloudy
-1027,728,0,NA,NA,NA,night,NA,NA,NA,snowing
+1027,728,1,NA,NA,NA,night,NA,NA,NA,snowing
 1027,698,5,NA,NA,NA,night,NA,NA,NA,sunny
 1027,681,1,NA,NA,NA,morning,NA,NA,NA,sunny
 1027,258,3,NA,NA,NA,afternoon,NA,NA,NA,cloudy
 1027,260,3,NA,NA,NA,afternoon,NA,NA,NA,sunny
-1027,728,0,NA,NA,sad,NA,NA,NA,NA,rainy
+1027,728,1,NA,NA,sad,NA,NA,NA,NA,rainy
 1027,722,3,NA,NA,sad,NA,NA,NA,NA,sunny
 1027,710,1,NA,NA,lazy,NA,NA,NA,NA,rainy
 1027,698,4,NA,NA,lazy,NA,NA,NA,NA,snowing
@@ -1911,10 +1911,10 @@
 1029,745,3,NA,NA,NA,afternoon,NA,NA,NA,sunny
 1029,699,3,NA,NA,happy,NA,NA,NA,NA,rainy
 1029,745,3,NA,urban,NA,NA,NA,NA,NA,rainy
-1029,745,0,NA,NA,NA,NA,NA,NA,NA,snowing
-1029,283,0,NA,NA,NA,NA,NA,NA,NA,cloudy
-1029,674,0,NA,NA,NA,NA,NA,NA,NA,cloudy
-1029,690,0,NA,NA,NA,NA,NA,NA,NA,cloudy
+1029,745,1,NA,NA,NA,NA,NA,NA,NA,snowing
+1029,283,1,NA,NA,NA,NA,NA,NA,NA,cloudy
+1029,674,1,NA,NA,NA,NA,NA,NA,NA,cloudy
+1029,690,1,NA,NA,NA,NA,NA,NA,NA,cloudy
 1030,760,3,NA,NA,NA,NA,NA,NA,NA,snowing
 1030,751,1,NA,NA,NA,NA,NA,NA,NA,snowing
 1030,273,3,NA,NA,NA,NA,NA,NA,NA,sunny
@@ -1958,22 +1958,22 @@
 1031,254,1,NA,NA,NA,NA,NA,NA,NA,cloudy
 1032,684,4,NA,NA,NA,NA,NA,NA,NA,cloudy
 1032,742,2,NA,NA,NA,NA,NA,NA,NA,sunny
-1032,716,0,NA,NA,NA,NA,NA,NA,NA,rainy
+1032,716,1,NA,NA,NA,NA,NA,NA,NA,rainy
 1032,675,4,NA,NA,NA,NA,NA,NA,NA,sunny
-1032,724,0,NA,NA,NA,NA,NA,NA,NA,snowing
+1032,724,1,NA,NA,NA,NA,NA,NA,NA,snowing
 1032,731,1,NA,NA,NA,NA,NA,NA,traffic jam,rainy
 1032,755,1,NA,NA,NA,NA,NA,NA,traffic jam,rainy
-1032,716,0,NA,NA,NA,NA,NA,NA,traffic jam,snowing
+1032,716,1,NA,NA,NA,NA,NA,NA,traffic jam,snowing
 1032,682,2,NA,NA,NA,NA,NA,NA,traffic jam,snowing
 1032,719,2,NA,NA,NA,NA,NA,NA,lots of cars,cloudy
 1032,727,1,NA,NA,NA,NA,NA,NA,lots of cars,rainy
 1032,758,2,NA,NA,NA,NA,NA,NA,lots of cars,sunny
 1032,295,5,NA,NA,NA,NA,NA,NA,free road,sunny
 1032,758,4,NA,NA,NA,NA,NA,NA,free road,snowing
-1032,250,0,NA,NA,NA,NA,NA,sleepy,NA,cloudy
+1032,250,1,NA,NA,NA,NA,NA,sleepy,NA,cloudy
 1032,728,1,NA,NA,NA,NA,NA,awake,NA,cloudy
 1032,740,1,NA,NA,NA,NA,NA,awake,NA,rainy
-1032,250,0,NA,NA,NA,NA,serpentine,NA,NA,snowing
+1032,250,1,NA,NA,NA,NA,serpentine,NA,NA,snowing
 1032,262,1,NA,NA,NA,morning,NA,NA,NA,cloudy
 1032,682,2,NA,NA,NA,day time,NA,NA,NA,rainy
 1032,684,4,NA,NA,NA,day time,NA,NA,NA,sunny
@@ -1988,9 +1988,9 @@
 1032,715,4,NA,NA,lazy,NA,NA,NA,NA,sunny
 1032,727,3,NA,NA,lazy,NA,NA,NA,NA,cloudy
 1032,744,3,NA,urban,NA,NA,NA,NA,NA,snowing
-1032,250,0,NA,urban,NA,NA,NA,NA,NA,rainy
+1032,250,1,NA,urban,NA,NA,NA,NA,NA,rainy
 1032,252,2,NA,urban,NA,NA,NA,NA,NA,snowing
-1032,724,0,NA,mountains,NA,NA,NA,NA,NA,cloudy
+1032,724,1,NA,mountains,NA,NA,NA,NA,NA,cloudy
 1032,744,2,NA,mountains,NA,NA,NA,NA,NA,rainy
 1032,705,4,NA,mountains,NA,NA,NA,NA,NA,cloudy
 1032,262,1,NA,mountains,NA,NA,NA,NA,NA,sunny
@@ -1999,7 +1999,7 @@
 1032,705,4,NA,coast line,NA,NA,NA,NA,NA,sunny
 1032,252,3,NA,coast line,NA,NA,NA,NA,NA,cloudy
 1032,684,3,NA,coast line,NA,NA,NA,NA,NA,rainy
-1032,716,0,sport driving,NA,NA,NA,NA,NA,NA,sunny
+1032,716,1,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1032,740,1,sport driving,NA,NA,NA,NA,NA,NA,sunny
 1032,740,1,relaxed driving,NA,NA,NA,NA,NA,NA,snowing
 1032,731,1,relaxed driving,NA,NA,NA,NA,NA,NA,sunny
@@ -2330,7 +2330,7 @@
 1034,295,3,NA,NA,NA,NA,NA,NA,lots of cars,rainy
 1034,295,3,NA,NA,lazy,NA,NA,NA,NA,sunny
 1034,295,3,NA,NA,active,NA,NA,NA,NA,snowing
-1035,276,0,NA,NA,NA,NA,NA,NA,NA,rainy
+1035,276,1,NA,NA,NA,NA,NA,NA,NA,rainy
 1035,726,3,NA,NA,NA,NA,NA,NA,NA,snowing
 1035,683,2,NA,NA,NA,NA,NA,NA,NA,cloudy
 1035,254,2,NA,NA,NA,NA,NA,NA,NA,cloudy
@@ -2338,7 +2338,7 @@
 1035,255,4,NA,NA,NA,NA,NA,NA,NA,cloudy
 1035,747,1,NA,NA,NA,NA,NA,NA,NA,sunny
 1035,747,1,NA,NA,NA,NA,NA,NA,traffic jam,rainy
-1035,276,0,NA,NA,NA,NA,NA,NA,traffic jam,cloudy
+1035,276,1,NA,NA,NA,NA,NA,NA,traffic jam,cloudy
 1035,726,2,NA,NA,NA,NA,NA,NA,traffic jam,sunny
 1035,739,2,NA,NA,NA,NA,NA,NA,lots of cars,rainy
 1035,262,3,NA,NA,NA,NA,NA,NA,free road,rainy
@@ -2357,7 +2357,7 @@
 1035,284,3,NA,NA,NA,NA,city,NA,NA,snowing
 1035,255,2,NA,NA,NA,morning,NA,NA,NA,snowing
 1035,676,4,NA,NA,NA,day time,NA,NA,NA,snowing
-1035,704,0,NA,NA,NA,day time,NA,NA,NA,snowing
+1035,704,1,NA,NA,NA,day time,NA,NA,NA,snowing
 1035,690,3,NA,NA,NA,afternoon,NA,NA,NA,snowing
 1035,676,3,NA,NA,lazy,NA,NA,NA,NA,cloudy
 1035,250,1,NA,NA,lazy,NA,NA,NA,NA,snowing
@@ -2369,9 +2369,9 @@
 1035,730,1,NA,urban,NA,NA,NA,NA,NA,sunny
 1035,758,4,NA,mountains,NA,NA,NA,NA,NA,snowing
 1035,674,1,NA,mountains,NA,NA,NA,NA,NA,rainy
-1035,704,0,NA,mountains,NA,NA,NA,NA,NA,cloudy
+1035,704,1,NA,mountains,NA,NA,NA,NA,NA,cloudy
 1035,683,2,NA,country side,NA,NA,NA,NA,NA,sunny
-1035,704,0,NA,coast line,NA,NA,NA,NA,NA,sunny
+1035,704,1,NA,coast line,NA,NA,NA,NA,NA,sunny
 1035,291,2,NA,coast line,NA,NA,NA,NA,NA,cloudy
 1035,284,3,relaxed driving,NA,NA,NA,NA,NA,NA,sunny
 1035,758,4,relaxed driving,NA,NA,NA,NA,NA,NA,cloudy
